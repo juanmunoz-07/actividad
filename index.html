@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Panel para gestionar usuarios con JavaScript y una API.">
+  <title>Panel de Gestión de Usuarios</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="encabezado">
+    <div class="contenedor encabezado-contenido">
+      <div>
+        <p class="sobre-titulo">PANEL DE ADMINISTRACIÓN</p>
+        <h1>Gestión de usuarios</h1>
+        <p class="subtitulo">Administra, consulta y organiza tus usuarios en un solo lugar.</p>
+      </div>
+      <div class="contador" aria-live="polite">
+        <span class="contador-numero" id="totalUsuarios">0</span>
+        <span>usuarios</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="contenedor principal">
+    <p id="mensaje" class="mensaje" role="status" aria-live="polite">Preparando el panel...</p>
+
+    <section class="tarjeta" aria-labelledby="tituloFormulario">
+      <div class="titulo-seccion">
+        <div>
+          <p class="sobre-titulo">GESTIÓN</p>
+          <h2 id="tituloFormulario">Agregar usuario</h2>
+        </div>
+        <span class="etiqueta">Formulario</span>
+      </div>
+      <form id="formularioUsuario">
+        <div class="campos">
+          <div class="campo">
+            <label for="id">ID</label>
+            <input type="number" id="id" name="id" min="1" step="1" placeholder="Ej. 11" required>
+          </div>
+          <div class="campo">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ej. Ana García" required>
+          </div>
+          <div class="campo">
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo" placeholder="nombre@correo.com" required>
+          </div>
+          <div class="campo">
+            <label for="ciudad">Ciudad</label>
+            <input type="text" id="ciudad" name="ciudad" placeholder="Ej. Barranquilla" required>
+          </div>
+        </div>
+        <div class="acciones-formulario">
+          <button type="submit" id="botonEnviar" class="boton boton-principal">Agregar usuario</button>
+          <button type="button" id="botonCancelar" class="boton boton-secundario oculto">Cancelar edición</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="tarjeta" aria-labelledby="tituloLista">
+      <div class="titulo-seccion titulo-lista">
+        <div>
+          <p class="sobre-titulo">DIRECTORIO</p>
+          <h2 id="tituloLista">Usuarios registrados</h2>
+        </div>
+        <span class="etiqueta etiqueta-verde">Lista en vivo</span>
+      </div>
+      <div class="buscador">
+        <label for="busqueda">Buscar por nombre</label>
+        <input type="search" id="busqueda" placeholder="Escribe un nombre para filtrar...">
+      </div>
+      <div class="tabla-contenedor">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Correo</th>
+              <th>Ciudad</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="cuerpoTabla"></tbody>
+        </table>
+      </div>
+      <p id="sinResultados" class="sin-resultados oculto">No se encontraron usuarios con ese nombre.</p>
+      <p class="nota-tabla">Los cambios se mantienen mientras esta página permanezca abierta.</p>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p>Panel de Gestión de Usuarios · Actividad 1</p>
+  </footer>
+</body>
+</html>

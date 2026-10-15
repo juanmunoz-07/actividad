@@ -1,0 +1,9 @@
+ACTIVIDAD 1 - PANEL DE GESTIÓN DE USUARIOS
+
+Repositorio GitHub:
+Pega aquí el enlace de tu repositorio público cuando lo hayas creado.
+
+Despliegue:
+Pega aquí el enlace publicado en GitHub Pages, Netlify o Vercel cuando lo hayas desplegado.
+
+Nota: estos enlaces deben completarse con las direcciones reales del proyecto. No se han inventado enlaces.
